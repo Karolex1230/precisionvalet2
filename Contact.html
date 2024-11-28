@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Precision Valet</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Arial", sans-serif;
+            background: linear-gradient(135deg, #cc5200, #000); /* Orange-to-black gradient background */
+            color: #fff;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #ff6600;
+        }
+
+                /* Header Section */
+ header {
+            background: #000;
+            padding: 0px;
+            text-align: center;
+            border-bottom: 2px solid #ff6600;
+        }
+
+        header h1 {
+            font-size: 28px;
+            color: #ff6600;
+        }
+        .navbar {
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav buttons */
+    align-items: center; /* Align items vertically */
+    padding: 20px 50px;
+}
+
+        .nav-logo {
+    display: flex;
+    align-items: center; /* Align logo and text vertically */
+    gap: 10px; /* Space between logo and title */
+}
+.nav-logo img.logo {
+    height: 130px; /* Resize the logo */
+    width: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure the image does not overflow */
+}
+.nav-logo span {
+    font-size: 24px; /* Font size for the title */
+    font-weight: bold;
+    color: #fff;
+}
+
+        .nav-buttons {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-buttons li {
+    font-size: 16px;
+}
+
+.nav-buttons a {
+    position: relative; /* Needed for pseudo-element positioning */
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth text color change */
+}
+
+.nav-buttons a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid transparent;
+    border-radius: 5px; /* Matches the button's radius */
+    transition: all 0.3s ease; /* Smooth animation for the border */
+}
+
+.nav-buttons a:hover::after {
+    border-color: #ff6600; /* Adds the orange border on hover */
+    transform: scale(1.1); /* Adds a subtle zoom effect */
+}
+
+.nav-buttons a:hover {
+    color: #ff6600; /* Changes the text color on hover */
+}
+
+        .header h1 {
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Footer */
+        .footer {
+    background: rgba(0, 0, 0, 0.9); /* Darker footer */
+    color: #fff;
+	
+}
+
+.footer-links a {
+    display: inline-block;
+    width: 50px; /* Icon container size */
+    height: 50px;
+    border: 2px solid transparent; /* Initial state: no border */
+    border-radius: 50%; /* Circular outline */
+    text-align: center;
+    line-height: 50px; /* Center icon vertically */
+    transition: border-color 0.3s, color 0.3s; /* Smooth hover effect */
+    color: #fff; /* Default icon color */
+    font-size: 24px; /* Icon size */
+}
+
+.footer-links a:hover {
+    border-color: #ff6600; /* Adds orange border on hover */
+    color: #ff6600; /* Changes icon color to orange */
+}
+footer {
+            background: #000;
+            padding: 10px 20px;
+            text-align: center;
+            border-top: 2px solid #ff6600;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #f0f0f0;
+        }
+
+        footer a {
+            color: #ff6600;
+        }
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+        /* Centered Box Styles */
+        .centered-box {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            width: 90%;
+            max-width: 500px;
+            margin: 50px auto;
+        }
+
+        .centered-box h2 {
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ff6600;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 16px;
+            color: #ffcc00;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ff6600;
+            border-radius: 5px;
+            background: #000;
+            color: #fff;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #ccc;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #ffcc00;
+        }
+
+        .submit-button {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #ff6600, #ff3300);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 5px #ff6600, 0 0 15px rgba(255, 102, 0, 0.5);
+}
+
+.submit-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff6600, 0 0 25px rgba(255, 102, 0, 0.8);
+}
+
+		.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between radio rows */
+    margin-top: 10px; /* Adds spacing below the label */
+}
+
+.radio-item {
+    display: flex;
+    align-items: center; /* Vertically align radio button and text */
+    gap: 10px; /* Space between radio button and text */
+    font-size: 16px; /* Matches the form's font size */
+    line-height: 1.4; /* Better spacing between lines */
+    color: #f0f0f0; /* Matches the form's text color */
+}
+
+.radio-item input[type="radio"] {
+    -webkit-appearance: none; /* Remove default radio appearance */
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px; /* Size of the square */
+    height: 20px;
+    border: 2px solid #ff6600; /* Border color */
+    border-radius: 4px; /* Makes it square (set to 0 for sharp edges) */
+    outline: none;
+    background-color: #000; /* Background color */
+    cursor: pointer;
+    position: relative;
+}
+.radio-item input[type="radio"] {
+    -webkit-appearance: none; /* Remove default radio appearance */
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px; /* Size of the square */
+    height: 20px;
+    border: 2px solid #ff6600; /* Border color */
+    border-radius: 4px; /* Slightly rounded corners */
+    outline: none;
+    background-color: #000; /* Default background */
+    cursor: pointer;
+    position: relative;
+}
+
+.radio-item input[type="radio"]:checked {
+    border-color: #ff6600; /* Border remains orange when selected */
+}
+
+.radio-item input[type="radio"]:checked::after {
+    content: "✔"; /* Unicode character for the tick */
+    font-size: 14px; /* Adjust the size of the tick */
+    color: #ff6600; /* Tick color */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the tick */
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ff6600; /* Matches form styling */
+    border-radius: 5px;
+    background: #000; /* Matches the theme */
+    color: #fff;
+    appearance: none; /* Removes the default dropdown arrow styling */
+    cursor: pointer;
+}
+
+select:focus {
+    outline: none;
+    border-color: #ffcc00; /* Highlight border on focus */
+}
+
+option {
+    background: #000; /* Dropdown options background */
+    color: #fff; /* Text color for options */
+}
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ff6600; /* Matches form styling */
+    border-radius: 5px;
+    background: #000; /* Matches the theme */
+    color: #fff;
+    appearance: none; /* Removes the default dropdown arrow */
+    cursor: pointer;
+    position: relative; /* Allows custom background */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23ff6600'%3E%3Cpath fill-rule='evenodd' d='M10 14l-5-5h10l-5 5z' clip-rule='evenodd'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Positions the arrow */
+    background-size: 15px; /* Adjusts arrow size */
+}
+
+select:focus {
+    outline: none;
+    border-color: #ffcc00; /* Highlight border on focus */
+}
+
+option {
+    background: #000; /* Dropdown options background */
+    color: #fff; /* Text color for options */
+}
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ff6600; /* Matches the input fields */
+    border-radius: 5px;
+    background: #000; /* Matches the theme */
+    color: #fff; /* Text color */
+    resize: vertical; /* Allows vertical resizing only */
+    min-height: 100px; /* Makes it larger by default */
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #ffcc00; /* Highlight border on focus */
+}
+
+textarea::placeholder {
+    color: #ccc; /* Placeholder text color */
+}
+@media (max-width: 600px) {
+    .centered-box {
+        padding: 15px;
+        max-width: 95%; /* Almost full width for smaller screens */
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <header class="header">
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="logo.png" alt="Precision Valet Logo" class="logo">
+           
+        </div>
+        <ul class="nav-buttons">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Services.html">Price & Services</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <div class="centered-box">
+        <h2>Submit Your Details</h2>
+       <form action="" method="POST">
+    <div class="form-group">
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" name="first_name" placeholder="Enter your first name" required>
+    </div>
+    <div class="form-group">
+        <label for="surname">Surname</label>
+        <input type="text" id="surname" name="surname" placeholder="Enter your surname" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    </div>
+    <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+    </div>
+
+    <!-- Checkboxes Section -->
+    <!-- Service Options with Radio Buttons -->
+<div class="form-group">
+    <label>Service Options</label>
+    <div class="radio-group">
+        <label class="radio-item">
+            <input type="radio" id="location" name="service_option" value="location">
+            <span>Our location (Rasharkin)</span>
+        </label>
+        <label class="radio-item">
+            <input type="radio" id="call-out" name="service_option" value="call_out">
+            <span>Call Out Job (Extra Fees May Apply)</span>
+        </label>
+    </div>
+</div>
+
+
+
+
+    <div class="form-group">
+        <label for="home-address">Home Address</label>
+        <input type="text" id="home-address" name="home_address" placeholder="Enter your home address" required>
+    </div>
+	<div class="form-group">
+    <label for="available-services">Available Services</label>
+    <select id="available-services" name="available_services" required>
+        <option value="" disabled selected>Select a service</option>
+        <option value="winter_resilience">Winter Resilience Package (recommended)</option>
+        <option value="enhancement_detail">Precision 1</option>
+        <option value="full_valet">Precision 2</option>
+        <option value="engine_cleaning">Showroom</option>
+		<option value="paint_protection">Gloss Enhancement</option>
+        <option value="paint_protection">Exterior Only</option>
+		<option value="paint_protection">Interior Only</option>
+        <option value="wheel_detailing">Extras (Include inside additional information)</option>
+    </select>
+</div>
+    <div class="form-group">
+        <label for="vehicle-make-model">Vehicle Make and Model</label>
+        <input type="text" id="vehicle-make-model" name="vehicle_make_model" placeholder="Enter your vehicle make and model" required>
+    </div>
+	<div class="form-group">
+    <label for="additional-info">Additional Information We Should Know</label>
+    <textarea id="additional-info" name="additional_info" placeholder="Enter any additional information here"></textarea>
+</div>
+    <button type="submit" class="submit-button">Submit</button>
+</form>
+
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Precision Valet. All rights reserved.</p>
+        <div class="footer-links">
+    <a href="https://www.facebook.com/profile.php?id=61559692455809" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/precision.valet/?fbclid=IwY2xjawGyfcxleHRuA2FlbQIxMAABHZbUHOXx6_gr39FzJiCmfZVuBc_UhHbp0MeyvfCmTzNgaunb1aqBrOU1dQ_aem_yL-tDJ6UyHZjla8UDoDIVg" class="social-icon"><i class="fab fa-instagram"></i></a>
+</div>
+
+    </footer>
+</body>
+</html>
+
+

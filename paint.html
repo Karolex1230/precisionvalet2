@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Precision Valet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Arial", sans-serif;
+            background: linear-gradient(135deg, #cc5200, #000); /* Orange-to-black gradient background */
+            color: #fff;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #ff6600;
+        }
+
+        /* Header Section */
+        header {
+            background: #000;
+            padding: 0;
+            text-align: center;
+            border-bottom: 2px solid #ff6600;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-logo img.logo {
+            height: 130px;
+            width: auto;
+            display: block;
+        }
+
+        .nav-logo span {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .nav-buttons {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-buttons li {
+            font-size: 16px;
+        }
+
+        .nav-buttons a {
+            position: relative;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-buttons a::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-buttons a:hover::after {
+            border-color: #ff6600;
+            transform: scale(1.1);
+        }
+
+        .nav-buttons a:hover {
+            color: #ff6600;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero img {
+            width: 50%;
+            max-height: 400px;
+            object-fit: cover;
+            border-bottom: 2px solid #ff6600;
+        }
+
+        .service-list {
+            margin: 30px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        .service-list ul {
+            list-style: none;
+        }
+
+        .service-list li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    position: relative;
+    padding-left: 25px; /* Adjust padding to make room for the tick */
+}
+
+.service-list li::before {
+    content: '\2713'; /* Unicode for the checkmark */
+    color: #ff6600; /* Set the color of the tick */
+    position: absolute;
+    left: 0; /* Position it to the left of the list item */
+    top: 0;
+    font-size: 18px; /* Match the size of the text */
+    line-height: 1; /* Align properly with the text */
+}
+
+
+        /* Button */
+        .quote-button {
+            display: block;
+            margin: 30px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background: #ff6600;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .quote-button:hover {
+            background: #e65c00;
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(0, 0, 0, 0.9);
+            color: #fff;
+        }
+
+        .footer-links a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border: 2px solid transparent;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            transition: border-color 0.3s, color 0.3s;
+            color: #fff;
+            font-size: 24px;
+        }
+
+        .footer-links a:hover {
+            border-color: #ff6600;
+            color: #ff6600;
+        }
+
+        footer {
+            background: #000;
+            padding: 10px 20px;
+            text-align: center;
+            border-top: 2px solid #ff6600;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-logo">
+                <img src="logo.png" alt="Precision Valet Logo" class="logo">
+            </div>
+            <ul class="nav-buttons">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Services.html">Price & Services</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="paint.png" alt="Hero Image">
+    </section>
+
+    <section class="service-list">
+        <h2>Our Services Include:</h2>
+        <ul>
+            <li>Foam Pre-Wash and Hand Wash</li>
+            <li>Clay Bar Treatment to Remove Surface Debris</li>
+            <li>Comprehensive Inspection of Paintwork With a Detailing Light to Identify Scratches, Swirls, and Imperfections</li>
+            <li>Polishing to Remove Light Swirls, Oxidation, and Minor Defects</li>
+            <li>Enhances Gloss and Clarity of The Paint</li>
+            <li>High-Quality Ceramic Coating or Paint Sealant to Protect The Corrected Surface</li>
+        </ul>
+    </section>
+
+    <a href="contact.html" class="quote-button">Get a Quote</a>
+
+    <footer class="footer">
+        <p>&copy; 2024 Precision Valet. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="https://www.facebook.com/profile.php?id=61559692455809" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/precision.valet/?fbclid=IwY2xjawGyfcxleHRuA2FlbQIxMAABHZbUHOXx6_gr39FzJiCmfZVuBc_UhHbp0MeyvfCmTzNgaunb1aqBrOU1dQ_aem_yL-tDJ6UyHZjla8UDoDIVg" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
